@@ -1,0 +1,280 @@
+/* Colors */
+
+:root {
+  --very-dary-grayish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+  --white: #ffffff;
+  --black: #000000;
+}
+
+@font-face {
+  font-family: 'Manrope Bold';
+  src: url('/assets/fonts/Manrope-Bold.woff2') format('woff2'),
+      url('/assets/fonts/Manrope-Bold.woff') format('woff'),
+      url('/assets/fonts/Manrope-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope Medium';
+  src: url('/assets/fonts/Manrope-Medium.woff2') format('woff2'),
+      url('/assets/fonts/Manrope-Medium.woff') format('woff'),
+      url('/assets/fonts/Manrope-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope Regular';
+  src: url('/assets/fonts/Manrope-Regular.woff2') format('woff2'),
+      url('/assets/fonts/Manrope-Regular.woff') format('woff'),
+      url('/assets/fonts/Manrope-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* General Styles */
+
+/* 
+  Styled from top to bottom of the design, 
+  beginning with mobile design and using 
+  media queries for desktop view 
+*/
+
+body {
+  font-size: 13px;
+  background-color: var(--light-grayish-blue);
+  color: var(--grayish-blue)
+}
+
+.main-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100vh; 
+}
+
+.article-preview-wrapper {
+  width: 84%;
+  margin: auto;
+  border-radius: 10px;
+  background-color: var(--white);
+  max-width: 300px;
+}
+
+.article-preview-image-wrapper img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.article-preview-info-wrapper {
+  padding: 20px;
+}
+
+.article-preview-info {
+  line-height: 1.5;
+  color: var(--very-dary-grayish-blue);
+}
+
+.desktop-line-break {
+  display: none;
+}
+
+.article-preview-info h2 {
+  font-family: 'Manrope Bold';
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+.article-preview-info p {
+  font-family: 'Manrope Medium';
+  font-size: 13px;
+  padding-bottom: 10px;
+}
+
+.article-author-info-wrapper {
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+}
+
+.article-author-image {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.author-name-pub-date h2 {
+  font-family: 'Manrope Bold';
+  color: var(--very-dary-grayish-blue);
+  font-size: 15px;
+  padding: 10px 0 0 0;
+}
+
+.author-name-pub-date p {
+  font-family: 'Manrope Medium';
+  font-size: 13px;
+}
+
+.article-share-icon-wrapper {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--light-grayish-blue);
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.article-share-icon {
+  width: 15px;
+  height: 15px;
+  margin: auto;
+}
+
+.article-hover-socials {
+  background-color: var(--very-dary-grayish-blue);
+  display: flex;
+  border-radius: 0 0 10px 10px;
+  align-items: center;
+  height: 60px;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.article-hover-socials p {
+  font-family: 'Manrope Medium';
+  font-size: 14px;
+  letter-spacing: 3px;
+}
+
+.social-icons-wrapper img {
+  margin-left: 10px;
+}
+
+.social-icons-wrapper img:nth-child(1) {
+  margin-left: -60px;
+}
+
+.article-social-share-icon-wrapper {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--desaturated-dark-blue);
+}
+
+.social-arrow {
+  width: 13px;
+  height: 13px;
+  margin: auto;
+}
+
+.triangle-down {
+  display: none;
+}
+
+/* Responsive Fonts Below 308px Width */
+
+@media (max-width: 308px) {
+
+  h2 {
+    font-size: 4.5vw !important;
+  }
+
+  p {
+    font-size: 4vw !important;
+  }
+
+}
+
+/* Desktop Breakpoint */
+
+@media (min-width: 750px) {
+
+  .article-preview-wrapper {
+    display: inline-flex !important;
+    border-radius: 10px !important;
+    max-width: 700px;
+  }
+
+  .mobile-image {
+    visibility: hidden;
+  }
+
+  .article-preview-image-wrapper {
+    background-image: url("/assets/images/drawers.jpg");
+    height: 300px;  
+    background-position: left;  
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    -webkit-border-radius: 10px 0 0 10px;
+    -moz-border-radius: 10px 0 0 10px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    max-width: 300px;
+  }
+
+  .desktop-line-break {
+    display: inline !important;
+  }
+
+  .article-preview-info {
+    padding-top: 12px;
+  }
+
+  .article-preview-info h2 {
+    font-size: 18px;
+    padding-bottom: 20px;
+  }
+
+  .article-preview-info p {
+    line-height: 1.6;
+  }
+
+  .article-preview-info-wrapper {
+    min-width: 350px;
+  }
+
+  .desktop-position-wrapper {
+    position: absolute;
+  }
+
+  .article-author-info-wrapper {
+    display: flex !important;
+  }
+
+  .article-hover-socials {
+    display: inline-flex;
+    position: relative;
+    top: -140px;
+    left: 240px;
+    width: 170px;
+    height: 50px;
+    border-radius: 10px;
+  }
+
+  .article-social-share-icon-wrapper {
+    display: none;
+  }
+
+  .triangle-down {
+    display: inline;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 20px solid var(--very-dary-grayish-blue);
+    position: relative;
+    top: -45px;
+    left: 63px;
+  }
+
+}
