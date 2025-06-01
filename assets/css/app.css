@@ -11,9 +11,9 @@
 
 @font-face {
   font-family: 'Manrope Bold';
-  src: url('./assets/fonts/Manrope-Bold.woff2') format('woff2'),
-      url('./assets/fonts/Manrope-Bold.woff') format('woff'),
-      url('./assets/fonts/Manrope-Bold.ttf') format('truetype');
+  src: url('../fonts/Manrope-Bold.woff2') format('woff2'),
+      url('../fonts/Manrope-Bold.woff') format('woff'),
+      url('../fonts/Manrope-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -21,9 +21,9 @@
 
 @font-face {
   font-family: 'Manrope Medium';
-  src: url('./assets/fonts/Manrope-Medium.woff2') format('woff2'),
-      url('./assets/fonts/Manrope-Medium.woff') format('woff'),
-      url('./assets/fonts/Manrope-Medium.ttf') format('truetype');
+  src: url('../fonts/Manrope-Medium.woff2') format('woff2'),
+      url('../fonts/Manrope-Medium.woff') format('woff'),
+      url('../fonts/Manrope-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -31,9 +31,9 @@
 
 @font-face {
   font-family: 'Manrope Regular';
-  src: url('./assets/fonts/Manrope-Regular.woff2') format('woff2'),
-      url('./assets/fonts/Manrope-Regular.woff') format('woff'),
-      url('./assets/fonts/Manrope-Regular.ttf') format('truetype');
+  src: url('../fonts/Manrope-Regular.woff2') format('woff2'),
+      url('../fonts/Manrope-Regular.woff') format('woff'),
+      url('../fonts/Manrope-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -210,7 +210,7 @@ body {
   }
 
   .article-preview-image-wrapper {
-    background-image: url("./assets/images/drawers.jpg");
+    background-image: url("../images/drawers.jpg");
     height: 300px;  
     background-position: left;  
     background-repeat: no-repeat; 
